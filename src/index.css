@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables (theme colors, fonts) */
+:root {
+    --color-primary: #2563eb;
+    --color-secondary: #64748b;
+    --body-bg: #e4f3fa;
+    --color-text: #1e293b;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+
+body {
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}

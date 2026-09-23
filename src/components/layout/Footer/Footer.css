@@ -1,0 +1,27 @@
+.footer {
+    padding: 20px 0;
+    background-color: #f5f5f5;
+}
+
+.footerWrap {
+    width: 100%;
+}
+
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddddddc2;
+    padding-bottom: 8px;
+}
+
+.footerBottom {
+    margin-top: 8px;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.copy_right_text {
+    color: #777;
+    font-size: 14px;
+}

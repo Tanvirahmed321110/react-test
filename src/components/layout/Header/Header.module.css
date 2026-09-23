@@ -1,0 +1,35 @@
+header {
+    border-bottom: 1px solid #ededed;
+    padding: 12px 0;
+    background-color: rgb(255, 102, 0);
+}
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+}
+
+/* logo */
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Nav */
+.nav {
+    display: flex;
+    gap: 16px;
+}
+
+.nav a {
+    color: blue;
+}
+
+.login {
+    font-weight: 500;
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: rgb(254, 176, 32);
+}
