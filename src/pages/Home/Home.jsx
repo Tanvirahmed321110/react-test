@@ -9,7 +9,7 @@ import BestCard from "../../components/BestCard"
 
 const Home = () => {
     return (
-        <div className="">
+        <div className="section-gap">
             <div className="container">
                 <div className="hero flex gap-6 h-[480px]">
                     <div className="banner h-full overflow-hidden  w-[70%]">

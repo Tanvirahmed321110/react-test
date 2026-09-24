@@ -1,7 +1,7 @@
 .footer-area {
     padding: 20px 0;
-    background-color: #f5f5f5;
-    border-top: 1px solid #eeeeeeda;
+    background-color: #1F2A44;
+    color: #cac7c7;
 }
 
 .footerWrap {
@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #ddddddc2;
+    border-bottom: 1px solid #dddddd2b;
     padding-bottom: 8px;
 }
 
