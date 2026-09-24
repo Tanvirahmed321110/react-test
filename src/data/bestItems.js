@@ -178,6 +178,185 @@ const bestItems = [
 
         description: "Retro-inspired high-top sneaker with premium materials and iconic styling.",
     },
+    {
+        id: 11,
+        image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=800&q=80",
+        title: "Air Sport Elite",
+        tag: "Best Seller",
+        offer: "20% OFF",
+
+        category: "Running",
+        brand: "Nike",
+        price: 109.99,
+        oldPrice: 139.99,
+        rating: 4.8,
+        reviews: 332,
+        stock: 20,
+
+        description: "Advanced running sneaker with excellent support and lightweight design.",
+    },
+
+    {
+        id: 12,
+        image: "https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=800&q=80",
+        title: "Classic White Pro",
+        tag: "Popular",
+        offer: "15% OFF",
+
+        category: "Casual",
+        brand: "Adidas",
+        price: 84.99,
+        oldPrice: 99.99,
+        rating: 4.7,
+        reviews: 221,
+        stock: 15,
+
+        description: "Clean white sneaker perfect for everyday casual outfits.",
+    },
+
+    {
+        id: 13,
+        image: "https://images.unsplash.com/photo-1518002171953-a080ee817e1f?auto=format&fit=crop&w=800&q=80",
+        title: "Velocity Runner",
+        tag: "Trending",
+        offer: "25% OFF",
+
+        category: "Sports",
+        brand: "Puma",
+        price: 74.99,
+        oldPrice: 99.99,
+        rating: 4.6,
+        reviews: 198,
+        stock: 28,
+
+        description: "Performance sports shoe built for speed and comfort.",
+    },
+
+    {
+        id: 14,
+        image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80",
+        title: "Street Classic",
+        tag: "Featured",
+        offer: "18% OFF",
+
+        category: "Lifestyle",
+        brand: "Converse",
+        price: 62.99,
+        oldPrice: 76.99,
+        rating: 4.5,
+        reviews: 167,
+        stock: 11,
+
+        description: "Classic streetwear sneaker with timeless design.",
+    },
+
+    {
+        id: 15,
+        image: "https://images.unsplash.com/photo-1562183241-b937e95585b6?auto=format&fit=crop&w=800&q=80",
+        title: "Mountain Trek",
+        tag: "Outdoor",
+        offer: "22% OFF",
+
+        category: "Outdoor",
+        brand: "Columbia",
+        price: 119.99,
+        oldPrice: 149.99,
+        rating: 4.8,
+        reviews: 287,
+        stock: 13,
+
+        description: "Durable outdoor shoe designed for hiking and adventure.",
+    },
+
+    {
+        id: 16,
+        image: "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=800&q=80",
+        title: "Comfort Walk",
+        tag: "Recommended",
+        offer: "10% OFF",
+
+        category: "Walking",
+        brand: "Skechers",
+        price: 69.99,
+        oldPrice: 77.99,
+        rating: 4.7,
+        reviews: 356,
+        stock: 30,
+
+        description: "Ultra comfortable walking shoe with soft cushioning.",
+    },
+
+    {
+        id: 17,
+        image: "https://images.unsplash.com/photo-1554139847-1a7c3d4f5f2a?auto=format&fit=crop&w=800&q=80",
+        title: "Luxury Leather",
+        tag: "Premium",
+        offer: "30% OFF",
+
+        category: "Formal",
+        brand: "Clarks",
+        price: 139.99,
+        oldPrice: 199.99,
+        rating: 4.9,
+        reviews: 409,
+        stock: 6,
+
+        description: "Premium leather footwear with elegant formal styling.",
+    },
+
+    {
+        id: 18,
+        image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=800&q=80",
+        title: "Speed Racer",
+        tag: "Hot",
+        offer: "27% OFF",
+
+        category: "Running",
+        brand: "Asics",
+        price: 99.99,
+        oldPrice: 136.99,
+        rating: 4.8,
+        reviews: 275,
+        stock: 19,
+
+        description: "High-performance running shoe with responsive technology.",
+    },
+
+    {
+        id: 19,
+        image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=800&q=80",
+        title: "Daily Street Wear",
+        tag: "New Arrival",
+        offer: "14% OFF",
+
+        category: "Sneakers",
+        brand: "New Balance",
+        price: 88.99,
+        oldPrice: 103.99,
+        rating: 4.6,
+        reviews: 187,
+        stock: 22,
+
+        description: "Modern sneaker combining comfort and street fashion.",
+    },
+
+    {
+        id: 20,
+        image: "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80",
+        title: "Legend High Top",
+        tag: "Limited",
+        offer: "35% OFF",
+
+        category: "Basketball",
+        brand: "Jordan",
+        price: 149.99,
+        oldPrice: 229.99,
+        rating: 4.9,
+        reviews: 620,
+        stock: 4,
+
+        description: "Iconic high-top basketball sneaker with premium finish.",
+    },
 ];
 
 export default bestItems;

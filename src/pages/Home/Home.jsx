@@ -1,10 +1,11 @@
 import Ads from "./components/Ads"
 import Banner from "./components/Banner"
-import Card from "../../components/Card"
+import Card from "../../components/Categorycard"
 import './home.css'
 import trendingItems from "../../data/trendingItems"
 import bestItems from "../../data/bestItems";
 import BestCard from "../../components/BestCard"
+import Categorycard from "../../components/Categorycard"
 
 
 const Home = () => {
@@ -23,14 +24,14 @@ const Home = () => {
             </div>
 
 
-            {/* Trending Section */}
+            {/* Best Category  */}
             <div className="section-gap">
                 <div className="container">
                     <h2 className="section-title">Best Category </h2>
                     <div className="grid grid-cols-1 gap-4  pt-1 sm:grid-cols-2 lg:grid-cols-5">
 
                         {trendingItems.map((item) => (
-                            <Card
+                            <Categorycard
                                 key={item.id}
                                 {...item}
                             />

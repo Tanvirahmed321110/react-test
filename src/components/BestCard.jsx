@@ -1,12 +1,17 @@
+import { Link } from "react-router-dom";
+import '.././data/trendingItems'
+
 function BestCard(props) {
     return (
         <article className="best-card bg-white rounded-xl shadow-xl   transition-all duration-300 overflow-hidden group flex flex-col h-full">
             <div className="best-card-image relative overflow-hidden">
-                <img
-                    src={props.image}
-                    alt={props.title}
-                    className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+                <Link to={`/products/${props.id}`}>
+                    <img
+                        src={props.image}
+                        alt={props.title}
+                        className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                </Link>
 
                 <span className="best-card-tag absolute top-3 left-3 bg-gray-900 text-white text-[11px] font-semibold px-3 py-1.5 rounded-full tracking-wide">
                     {props.tag}

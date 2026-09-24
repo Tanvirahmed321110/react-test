@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
 
-function Card({ image, title, tag, offer }) {
+function Categorycard({ image, title, tag, offer, id }) {
     return (
         <article className="card bg-white rounded-xl shadow-md hover:shadow-xl   transition-shadow duration-300 overflow-hidden group">
             <div className="card-image-wrap relative overflow-hidden">
 
-                <img
-                    className="card-image w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                    src={image}
-                    alt={title}
-                />
+                <Link to={`/category/${id}`}>
+                    <img
+                        className="card-image w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                        src={image}
+                        alt={title}
+                    />
+                </Link>
 
 
                 <span className="card-tag absolute top-3 left-3 bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
@@ -30,4 +32,4 @@ function Card({ image, title, tag, offer }) {
     );
 }
 
-export default Card;
+export default Categorycard;
