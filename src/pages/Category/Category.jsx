@@ -1,6 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import bestItems from "../../data/bestItems";
 import BestCard from "../../components/BestCard";
+import Breadcrumb from "../../components/Breadcrumb";
 
 function Category() {
     const [searchParams] = useSearchParams();
@@ -12,6 +13,16 @@ function Category() {
 
     return (
         <div className="section-gap">
+            <div>
+                <Breadcrumb
+                    items={[
+                        { label: "Home", to: "/" },
+                        { label: "Products", to: "/products" },
+                        { label: categoryName },
+                    ]}
+                />
+            </div>
+
             <div className="container">
                 <h1 className="mb-6 text-3xl font-bold capitalize">
                     {categoryName} shoes

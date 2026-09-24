@@ -148,7 +148,7 @@
 
     /* Stats */
     .stats {
-        background: var(--navy);
+        background: var(--line);
     }
 
     .stats .container {
@@ -167,7 +167,7 @@
     }
 
     .stats span {
-        color: rgba(255, 255, 255, .7);
+        color: rgba(40, 39, 39, 0.759);
     }
 
     /* Promises */
