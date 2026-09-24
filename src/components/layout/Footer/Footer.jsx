@@ -5,19 +5,22 @@ import "./Footer.css";
 
 export default function Footer() {
     return (
-        <footer className="footer">
-            <div className="container">
-                <div className="footerWrap">
-                    <div className="footerTop">
-                        <Logo />
-                        <Social />
-                    </div>
+        <footer className="footer section-gap">
+            <div className="footer-area">
+                <div className="container">
+                    <div className="footerWrap">
+                        <div className="footerTop">
+                            <Logo />
+                            <Social />
+                        </div>
 
-                    <div className="footerBottom">
-                        <FooterBottom />
+                        <div className="footerBottom">
+                            <FooterBottom />
+                        </div>
                     </div>
                 </div>
             </div>
+
         </footer>
     );
 }
