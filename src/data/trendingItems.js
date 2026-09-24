@@ -5,6 +5,7 @@ const trendingItems = [
         title: "Classic Collection",
         tag: "Popular",
         offer: "20% OFF",
+        category: "running",
     },
     {
         id: 2,
@@ -12,6 +13,7 @@ const trendingItems = [
         title: "New Arrival",
         tag: "New",
         offer: "15% OFF",
+        category: "lifestyle",
     },
     {
         id: 3,
@@ -19,6 +21,7 @@ const trendingItems = [
         title: "Weekend Deal",
         tag: "Deal",
         offer: "30% OFF",
+        category: "training",
     },
     {
         id: 4,
@@ -26,6 +29,7 @@ const trendingItems = [
         title: "Best Seller",
         tag: "Featured",
         offer: "25% OFF",
+        category: "casual",
     },
     {
         id: 5,
@@ -33,6 +37,7 @@ const trendingItems = [
         title: "Sports Edition",
         tag: "Trending",
         offer: "18% OFF",
+        category: "sports",
     },
     {
         id: 6,
@@ -40,6 +45,7 @@ const trendingItems = [
         title: "Premium Sneaker",
         tag: "Hot",
         offer: "22% OFF",
+        category: "casual",
     },
     {
         id: 7,
@@ -47,6 +53,7 @@ const trendingItems = [
         title: "Urban Style",
         tag: "Featured",
         offer: "28% OFF",
+        category: "lifestyle",
     },
     {
         id: 8,
@@ -54,20 +61,23 @@ const trendingItems = [
         title: "Daily Comfort",
         tag: "Recommended",
         offer: "12% OFF",
+        category: "walking",
     },
     {
-        id: 7,
+        id: 9,
         image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=800&q=80",
         title: "Premium Sneaker",
         tag: "Hot",
         offer: "22% OFF",
+        category: "casual",
     },
     {
-        id: 8,
+        id: 10,
         image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=800&q=80",
         title: "Weekend Deal",
         tag: "Deal",
         offer: "33% OFF",
+        category: "training",
     },
 ];
 
