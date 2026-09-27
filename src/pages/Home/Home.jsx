@@ -6,6 +6,7 @@ import trendingItems from "../../data/trendingItems"
 import bestItems from "../../data/bestItems";
 import BestCard from "../../components/BestCard"
 import Categorycard from "../../components/Categorycard"
+import { Link } from "react-router-dom"
 
 
 const Home = () => {
@@ -14,11 +15,11 @@ const Home = () => {
             <div className="container">
                 <div className="hero flex gap-6 h-[480px]">
                     <div className="banner h-full overflow-hidden  w-[70%]">
-                        <Banner />
+                        <Link to='products/1'>   <Banner /></Link>
                     </div>
 
                     <div className=" flex flex-col  w-[30%] h-full bg-red-300">
-                        <Ads />
+                        <Link className="flex flex-col   h-full" to='products/3'>   <Ads /></Link>
                     </div>
                 </div>
             </div>

@@ -7,6 +7,7 @@ import Products from "../pages/Products/Products";
 import Offer from "../pages/Offer/Offer";
 import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import Category from "../pages/Category/Category";
+import Login from "../pages/Auth/Login";
 
 export default function AppRouter() {
     return (
@@ -19,6 +20,8 @@ export default function AppRouter() {
                 <Route path="/products" element={<Products />} />
                 <Route path="/products/:id" element={<ProductDetails />} />
                 <Route path="/happy-hour" element={<Offer />} />
+
+                <Route path="/login" element={<Login />} />
             </Route>
         </Routes>
     )

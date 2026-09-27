@@ -13,6 +13,7 @@ const bestItems = [
         rating: 4.8,
         reviews: 245,
         stock: 18,
+        is_offer: false,
 
         description: "Lightweight running sneaker with premium cushioning and breathable mesh.",
     },
@@ -23,7 +24,7 @@ const bestItems = [
         title: "Urban Street Sneaker",
         tag: "Popular",
         offer: "15% OFF",
-
+        is_offer: false,
         category: "Lifestyle",
         brand: "Adidas",
         price: 76.5,
@@ -41,7 +42,7 @@ const bestItems = [
         title: "Performance Pro",
         tag: "Trending",
         offer: "30% OFF",
-
+        is_offer: false,
         category: "Training",
         brand: "Puma",
         price: 69.99,
@@ -59,7 +60,7 @@ const bestItems = [
         title: "Classic Black Edition",
         tag: "Featured",
         offer: "20% OFF",
-
+        is_offer: false,
         category: "Casual",
         brand: "New Balance",
         price: 79.99,
@@ -77,7 +78,7 @@ const bestItems = [
         title: "Sports Max",
         tag: "Hot",
         offer: "18% OFF",
-
+        is_offer: false,
         category: "Sports",
         brand: "Reebok",
         price: 82.99,
@@ -95,7 +96,7 @@ const bestItems = [
         title: "Premium Canvas",
         tag: "Premium",
         offer: "22% OFF",
-
+        is_offer: false,
         category: "Casual",
         brand: "Vans",
         price: 58.99,
@@ -113,7 +114,7 @@ const bestItems = [
         title: "Urban Flex",
         tag: "Top Rated",
         offer: "28% OFF",
-
+        is_offer: false,
         category: "Lifestyle",
         brand: "Converse",
         price: 64.99,
@@ -131,7 +132,7 @@ const bestItems = [
         title: "Daily Comfort Plus",
         tag: "Recommended",
         offer: "12% OFF",
-
+        is_offer: false,
         category: "Walking",
         brand: "Skechers",
         price: 71.99,
@@ -149,7 +150,7 @@ const bestItems = [
         title: "Street Runner X",
         tag: "New",
         offer: "16% OFF",
-
+        is_offer: false,
         category: "Running",
         brand: "Asics",
         price: 95.99,
@@ -167,7 +168,7 @@ const bestItems = [
         title: "Retro High Top",
         tag: "Limited",
         offer: "35% OFF",
-
+        is_offer: false,
         category: "Lifestyle",
         brand: "Jordan",
         price: 129.99,
@@ -184,7 +185,7 @@ const bestItems = [
         title: "Air Sport Elite",
         tag: "Best Seller",
         offer: "20% OFF",
-
+        is_offer: false,
         category: "Running",
         brand: "Nike",
         price: 109.99,
@@ -202,7 +203,7 @@ const bestItems = [
         title: "Classic White Pro",
         tag: "Popular",
         offer: "15% OFF",
-
+        is_offer: false,
         category: "Casual",
         brand: "Adidas",
         price: 84.99,
@@ -220,7 +221,7 @@ const bestItems = [
         title: "Velocity Runner",
         tag: "Trending",
         offer: "25% OFF",
-
+        is_offer: false,
         category: "Sports",
         brand: "Puma",
         price: 74.99,
@@ -238,7 +239,7 @@ const bestItems = [
         title: "Street Classic",
         tag: "Featured",
         offer: "18% OFF",
-
+        is_offer: false,
         category: "Lifestyle",
         brand: "Converse",
         price: 62.99,
@@ -256,7 +257,7 @@ const bestItems = [
         title: "Mountain Trek",
         tag: "Outdoor",
         offer: "22% OFF",
-
+        is_offer: false,
         category: "Outdoor",
         brand: "Columbia",
         price: 119.99,
@@ -274,7 +275,7 @@ const bestItems = [
         title: "Comfort Walk",
         tag: "Recommended",
         offer: "10% OFF",
-
+        is_offer: false,
         category: "Walking",
         brand: "Skechers",
         price: 69.99,
@@ -291,7 +292,7 @@ const bestItems = [
         image: "https://images.unsplash.com/photo-1554139847-1a7c3d4f5f2a?auto=format&fit=crop&w=800&q=80",
         title: "Luxury Leather",
         tag: "Premium",
-        offer: "30% OFF",
+        offer: "30% OFF", is_offer: false,
 
         category: "Formal",
         brand: "Clarks",
@@ -310,6 +311,7 @@ const bestItems = [
         title: "Speed Racer",
         tag: "Hot",
         offer: "27% OFF",
+        is_offer: false,
 
         category: "Running",
         brand: "Asics",
@@ -328,7 +330,7 @@ const bestItems = [
         title: "Daily Street Wear",
         tag: "New Arrival",
         offer: "14% OFF",
-
+        is_offer: false,
         category: "Sneakers",
         brand: "New Balance",
         price: 88.99,
@@ -346,7 +348,7 @@ const bestItems = [
         title: "Legend High Top",
         tag: "Limited",
         offer: "35% OFF",
-
+        is_offer: false,
         category: "Basketball",
         brand: "Jordan",
         price: 149.99,

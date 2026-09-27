@@ -44,7 +44,7 @@ function ProductDetails() {
                     </div>
 
                     <div>
-                        <p className="meta">{brand} • <a href="/products?category=running">{category}</a></p>
+                        <p className="meta">{brand} • <Link to={`/category?name=${category.toLowerCase()}`}>{category}</Link></p>
                         <h1>{title}</h1>
                         <p className="rating"><strong>★ {reviews}</strong>({rating} reviews)</p>
 
