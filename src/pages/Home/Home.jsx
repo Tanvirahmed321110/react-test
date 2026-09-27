@@ -15,14 +15,18 @@ const Home = () => {
     return (
         <div className="section-gap">
             <div className="container">
-                <div className="hero flex gap-6 h-[480px]">
-                    <div className="banner h-full overflow-hidden  w-[70%]">
-                        <Link to='products/1'>   <Banner /></Link>
+                <div className="hero flex flex-col md:flex-row gap-6 h-auto md:h-[480px]">
+
+                    <div className="banner overflow-hidden w-full md:w-[70%] h-[300px] md:h-full">
+                        <Link to="products/1" className="block h-full">
+                            <Banner />
+                        </Link>
                     </div>
 
-                    <div className=" flex flex-col  w-[30%] h-full bg-red-300">
-                        <Link className="flex flex-col   h-full" to='products/3'>   <Ads /></Link>
+                    <div className="flex flex-col w-full md:w-[30%] md:h-[300px] h-[150px] md:h-full">
+                        <Ads />
                     </div>
+
                 </div>
             </div>
 

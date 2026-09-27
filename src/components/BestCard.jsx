@@ -13,7 +13,7 @@ function BestCard(props) {
                     <img
                         src={props.image}
                         alt={props.title}
-                        className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-45 md:h-60 object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                 </Link>
 
@@ -42,7 +42,7 @@ function BestCard(props) {
                     {props.title}
                 </h3>
 
-                <p className="best-card-description text-sm text-gray-500 mb-3 line-clamp-2 leading-relaxed">
+                <p className="best-card-description hidden md:block  text-sm text-gray-500 mb-3 line-clamp-2 leading-relaxed">
                     {props.description}
                 </p>
 
