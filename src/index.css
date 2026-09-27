@@ -113,3 +113,10 @@ button:hover {
 a {
     cursor: pointer;
 }
+
+.section-title {
+    font-weight: 700;
+    font-size: 30px !important;
+    letter-spacing: .4px;
+    line-height: 1.5;
+}

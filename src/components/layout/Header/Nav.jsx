@@ -3,7 +3,7 @@ import styles from './Header.module.css'
 
 export default function Nav() {
     return (
-        <nav className={styles.nav}>
+        <nav className={`${styles.nav} flex flex-col md:flex-row gap-5`}>
             <NavLink to="/" end>Home</NavLink>
             <NavLink to="/about">About</NavLink>
             <NavLink to="/contact">Contact</NavLink>

@@ -20,9 +20,9 @@ function Categorycard({ image, title, offer, category }) {
             </div>
 
             <div className="card-content p-2 md:p-4">
-                <h3 className="text-lg font-semibold text-gray-800 mb-1 line-clamp-1">
+                <h4 className="text-2xl font-semibold text-gray-800 mb-1 line-clamp-1">
                     {title}
-                </h3>
+                </h4>
 
                 <p className="card-offer text-sm text-green-600 font-medium">
                     {offer}
