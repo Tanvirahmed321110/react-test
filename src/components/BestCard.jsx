@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import '.././data/trendingItems'
+import Modal from "../components/Modal";
+import { useState } from "react";
 
 function BestCard(props) {
+    const [showModal, setShowModal] = useState(false);
+
     return (
         <article className="best-card bg-white rounded-xl shadow-xl   transition-all duration-300 overflow-hidden group flex flex-col h-full">
             <div className="best-card-image relative overflow-hidden">
@@ -63,9 +67,17 @@ function BestCard(props) {
                     </p>
                 </div>
 
-                <button className="mt-auto w-full card-btn  text-white text-md font-semibold py-2 rounded-lg transition-colors duration-200 active:scale-[0.98]">
+                <button onClick={() => {
+                    setShowModal(true)
+                    props.setCartTotal((prev) => prev + props.price)
+                }}
+                    className="mt-auto w-full card-btn  text-white text-md font-semibold py-2 rounded-lg transition-colors duration-200 active:scale-[0.98]">
                     Add to Cart
                 </button>
+
+                <Modal isOpen={showModal} onClose={() => setShowModal(false)} title="শীঘ্রই আসছে">
+                    Cart Total : ${props.cartTotal.toFixed(2)}
+                </Modal>
             </div>
         </article>
     );

@@ -1,8 +1,31 @@
 import { Link, useParams } from 'react-router-dom'
 import './ProductDetails.css'
 import trendingItems from '../../data/bestItems.js'
+import { useState } from 'react'
+import Modal from '../../components/Modal.jsx'
 
 function ProductDetails() {
+
+    const [zoomPosition, setZoomPosition] = useState({
+        x: 50,
+        y: 50
+    });
+
+    const handleMouseMove = (e) => {
+        const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+
+        const x = ((e.clientX - left) / width) * 100;
+        const y = ((e.clientY - top) / height) * 100;
+
+        setZoomPosition({
+            x,
+            y
+        });
+    };
+
+
+
+    const [cartModal, setCartModal] = useState(false)
 
     const { id } = useParams()
     const product = trendingItems.find((item) => item.id === Number(id))
@@ -34,10 +57,14 @@ function ProductDetails() {
                 </nav>
 
                 <section className="product">
-                    <div className="product-image">
+                    <div className="product-image" onMouseMove={handleMouseMove}>
                         <img
+                            className='object-cover transition-transform duration-300 hover:scale-150 cursor-zoom-in'
                             src={image}
-                            alt="Nike Air Runner"
+                            alt={title}
+                            style={{
+                                transformOrigin: `${zoomPosition.x}% ${zoomPosition.y}%`
+                            }}
                         />
                         <span className="badge badge-tag">{tag}</span>
                         <span className="badge badge-offer">{offer} </span>
@@ -69,7 +96,11 @@ function ProductDetails() {
 
                         <div className="buy">
                             <input className="qty" type="number" defaultValue="1" min="1" max="18" aria-label="Quantity" />
-                            <button className="add-btn" type="button">Add to Cart</button>
+                            <button onClick={() => setCartModal(true)} className="add-btn" type="button">Add to Cart</button>
+                            {/* Modal */}
+                            <Modal isOpen={cartModal} onClose={() => setCartModal(false)} >
+                                Feature Upcomming as soon as Possable
+                            </Modal>
                         </div>
 
                         <p className="stock">{stock} in stock</p>
@@ -83,8 +114,8 @@ function ProductDetails() {
                     </div>
                 </section>
 
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }
 

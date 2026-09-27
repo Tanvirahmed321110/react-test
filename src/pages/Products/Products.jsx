@@ -9,7 +9,7 @@ const PER_PAGE = 8;
 
 function Products() {
 
-
+    const [cartTotal, setCartTotal] = useState(0);
     const [page, setPage] = useState(1);
 
     const totalPages = Math.ceil(bestItems.length / PER_PAGE);
@@ -35,7 +35,9 @@ function Products() {
                 <div className='grid lg:grid-cols-4 sm:grid-cols-2 gap-5'>
                     {
                         items.map(item => (
-                            <BestCard key={item.key} {...item} />
+                            <BestCard key={item.key} {...item}
+                                cartTotal={cartTotal}
+                                setCartTotal={setCartTotal} />
                         ))
                     }
                 </div>
