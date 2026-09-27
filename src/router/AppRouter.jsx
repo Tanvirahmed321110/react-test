@@ -8,6 +8,7 @@ import Offer from "../pages/Offer/Offer";
 import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import Category from "../pages/Category/Category";
 import Login from "../pages/Auth/Login";
+import NotFound from "../components/NotFound";
 
 export default function AppRouter() {
     return (
@@ -22,6 +23,9 @@ export default function AppRouter() {
                 <Route path="/happy-hour" element={<Offer />} />
 
                 <Route path="/login" element={<Login />} />
+
+                {/* 404 Route */}
+                <Route path="*" element={<NotFound />} />
             </Route>
         </Routes>
     )

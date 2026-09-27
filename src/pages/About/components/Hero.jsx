@@ -13,7 +13,9 @@ function Hero() {
                             <a href="/contact" class="btn btn-light">Talk to us</a>
                         </div>
                     </div>
-                    <div class="hero-visual">
+                    <div
+                        className="hero-visual overflow-hidden">
+                        <img src="https://i.ibb.co.com/Pvvf9049/about.png" alt="" />
                         <div class="hero-badge">
                             <strong>Since 2019</strong>
                             <span>Dhaka, Bangladesh</span>

@@ -22,7 +22,6 @@
 
 .card-image-wrap {
     position: relative;
-    height: 180px;
 }
 
 .card-image {
@@ -44,9 +43,6 @@
     font-weight: 600;
 }
 
-.card-content {
-    padding: 16px;
-}
 
 .card-content h3 {
     margin-bottom: 8px;

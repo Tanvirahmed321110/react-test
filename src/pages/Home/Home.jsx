@@ -7,9 +7,11 @@ import bestItems from "../../data/bestItems";
 import BestCard from "../../components/BestCard"
 import Categorycard from "../../components/Categorycard"
 import { Link } from "react-router-dom"
+import { useState } from "react"
 
 
 const Home = () => {
+    const [cartTotal, setCartTotal] = useState(0);
     return (
         <div className="section-gap">
             <div className="container">
@@ -29,7 +31,7 @@ const Home = () => {
             <div className="section-gap">
                 <div className="container">
                     <h2 className="section-title">Best Category </h2>
-                    <div className="grid grid-cols-1 gap-4  pt-1 sm:grid-cols-2 lg:grid-cols-5">
+                    <div className="grid grid-cols-4 gap-3 md:gap-4  pt-1 sm:grid-cols-3 lg:grid-cols-5">
 
                         {trendingItems.map((item) => (
                             <Categorycard
@@ -46,12 +48,14 @@ const Home = () => {
             <section className="section-gap">
                 <div className="container">
                     <h2 className="section-title">Trending Best Items </h2>
-                    <div className="best-card grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="best-card grid grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                         {
                             bestItems.slice(0, 8).map((item) => (
                                 <BestCard
                                     key={item.id}
                                     {...item}
+                                    cartTotal={cartTotal}
+                                    setCartTotal={setCartTotal}
                                 />
                             )
                             )

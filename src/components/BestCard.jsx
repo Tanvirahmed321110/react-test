@@ -76,7 +76,7 @@ function BestCard(props) {
                 </button>
 
                 <Modal isOpen={showModal} onClose={() => setShowModal(false)} title="শীঘ্রই আসছে">
-                    Cart Total : ${props.cartTotal.toFixed(2)}
+                    Cart Total : ${(props.cartTotal || 0).toFixed(2)}
                 </Modal>
             </div>
         </article>

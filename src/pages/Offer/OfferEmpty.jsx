@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function OfferEmpty() {
     return (
@@ -12,9 +13,9 @@ function OfferEmpty() {
             <p class="mt-2 max-w-sm text-gray-500">
                 নতুন offer শুরু হলে এখানেই সবার আগে দেখতে পাবেন। ততক্ষণ আমাদের সব পণ্য ঘুরে দেখুন।
             </p>
-            <a href="/products" class="mt-6 rounded-lg bg-orange-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-orange-700">
+            <Link to="/products" class="mt-6 rounded-lg bg-orange-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-orange-700">
                 সব পণ্য দেখুন
-            </a>
+            </Link>
         </div>
     )
 }
