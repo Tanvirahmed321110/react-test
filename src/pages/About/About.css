@@ -152,7 +152,7 @@
 
     /* Stats */
     .stats {
-        background: var(--line);
+        background: rgba(255, 222, 173, 0.159);
     }
 
     .stats .container {

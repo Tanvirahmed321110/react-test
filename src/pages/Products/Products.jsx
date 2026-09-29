@@ -22,7 +22,7 @@ function Products() {
     };
 
     return (
-        <div className='section-gap'>
+        <div className='mt-8 section-gap-bottom'>
             <Breadcrumb
                 items={[
                     { label: "Home", to: "/" },

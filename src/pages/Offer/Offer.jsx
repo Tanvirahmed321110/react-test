@@ -9,7 +9,7 @@ function Offer() {
     const offerItems = bestItems.filter((item) => item.is_offer === true)
 
     return (
-        <div className='section-gap'>
+        <div className='mt-8'>
             <Breadcrumb
                 items={[
                     { label: "Home", to: "/" },

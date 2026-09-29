@@ -5,7 +5,7 @@ import "./Footer.css";
 
 export default function Footer() {
     return (
-        <footer className="footer section-gap">
+        <footer className="footer ">
             <div className="footer-area">
                 <div className="container">
                     <div className="footerWrap">

@@ -9,6 +9,7 @@ import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import Category from "../pages/Category/Category";
 import Login from "../pages/Auth/Login";
 import NotFound from "../components/NotFound";
+import Register from "../pages/Auth/Register";
 
 export default function AppRouter() {
     return (
@@ -23,6 +24,7 @@ export default function AppRouter() {
                 <Route path="/happy-hour" element={<Offer />} />
 
                 <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
 
                 {/* 404 Route */}
                 <Route path="*" element={<NotFound />} />

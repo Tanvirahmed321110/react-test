@@ -12,7 +12,7 @@ function Category() {
     );
 
     return (
-        <div className="section-gap">
+        <div className="mt-8 section-gap-bottom">
             <div>
                 <Breadcrumb
                     items={[

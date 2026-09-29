@@ -1,65 +1,48 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function Register() {
-    const [form, setForm] = useState({
-        name: "",
-        email: "",
-        password: "",
-        confirmPassword: "",
-    });
-    const [error, setError] = useState("");
+function Login() {
 
-    const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
-    };
+    const [email, setEmail] = useState(localStorage.getItem("rememberedEmail") || '')
+    const [password, setPassword] = useState("")
+    const [error, setError] = useState("")
+    const [rememberMe, setRememberMe] = useState(!!localStorage.getItem("rememberedEmail"));
+    const navigate = useNavigate()
 
-    const handleSubmit = (e) => {
+
+    // Submit
+    const haldleSubmit = (e) => {
         e.preventDefault();
-        setError("");
 
-        if (!form.name || !form.email || !form.password || !form.confirmPassword) {
-            setError("সব field পূরণ করুন।");
-            return;
+        // check email and password
+        if (email === 'tanvir@gmail.com' && password === '1111') {
+            if (rememberMe) {
+                localStorage.setItem("rememberedEmail", email);
+            } else {
+                localStorage.removeItem("rememberedEmail");
+            }
+
+            const user = { name: "Tanvir", email: email }
+
+            localStorage.setItem('token', 'fake-token-123')
+            localStorage.setItem('user', JSON.stringify(user))
+
+            navigate('/')
+            window.location.reload()
+        }
+        else {
+            setError("ইমেইল বা পাসওয়ার্ড ভুল");
         }
 
-        if (form.password.length < 6) {
-            setError("Password অন্তত ৬ অক্ষরের হতে হবে।");
-            return;
-        }
-
-        if (form.password !== form.confirmPassword) {
-            setError("দুটো password মিলছে না।");
-            return;
-        }
-
-        // এখানে আপনার আসল register API/logic বসবে
-        console.log("Register with:", form);
-    };
+    }
 
     return (
         <section className="flex min-h-[80vh] items-center justify-center px-4 py-16">
             <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-lg">
-                <h1 className="text-2xl font-bold text-[#1f2a44]">Create an account</h1>
-                <p className="mt-1 text-sm text-gray-500">
-                    নতুন account বানিয়ে কেনাকাটা শুরু করুন
-                </p>
+                <h1 className="text-2xl font-bold text-[#1f2a44]">Login Account</h1>
 
-                <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-                    <div>
-                        <label htmlFor="name" className="mb-1 block text-sm font-medium text-gray-700">
-                            Full name
-                        </label>
-                        <input
-                            id="name"
-                            name="name"
-                            type="text"
-                            value={form.name}
-                            onChange={handleChange}
-                            placeholder="Your name"
-                            className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
-                        />
-                    </div>
+                <form className="mt-6 space-y-4" onSubmit={haldleSubmit}>
+
 
                     <div>
                         <label htmlFor="email" className="mb-1 block text-sm font-medium text-gray-700">
@@ -69,8 +52,8 @@ function Register() {
                             id="email"
                             name="email"
                             type="email"
-                            value={form.email}
-                            onChange={handleChange}
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             placeholder="you@example.com"
                             className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
                         />
@@ -84,42 +67,38 @@ function Register() {
                             id="password"
                             name="password"
                             type="password"
-                            value={form.password}
-                            onChange={handleChange}
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                             placeholder="At least 6 characters"
                             className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
                         />
                     </div>
-
-                    <div>
-                        <label htmlFor="confirmPassword" className="mb-1 block text-sm font-medium text-gray-700">
-                            Confirm password
-                        </label>
+                    {/* Remember me */}
+                    <label className="flex items-center gap-2 text-sm text-gray-600">
                         <input
-                            id="confirmPassword"
-                            name="confirmPassword"
-                            type="password"
-                            value={form.confirmPassword}
-                            onChange={handleChange}
-                            placeholder="Re-enter password"
-                            className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
+                            type="checkbox"
+                            checked={rememberMe}
+                            onChange={(e) => setRememberMe(e.target.checked)}
+                            className="h-4 w-4 accent-orange-600"
                         />
-                    </div>
+                        Remember me
+                    </label>
 
-                    {error && <p className="text-sm text-red-600">{error}</p>}
+                    {error && <p className="text-sm text-red-600"> {error}</p>}
+
 
                     <button
                         type="submit"
-                        className="w-full rounded-lg bg-orange-600 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-orange-700"
+                        className="w-full rounded-lg bg-orange-600 py-2.5 text-md font-semibold text-white transition-colors hover:bg-orange-700"
                     >
-                        Create Account
+                        Login Now
                     </button>
                 </form>
 
                 <p className="mt-6 text-center text-sm text-gray-500">
-                    আগে থেকেই account আছে?{" "}
-                    <Link to="/login" className="font-semibold text-orange-600 hover:underline">
-                        Log in করুন
+                    account না থাকলে?{" "}
+                    <Link to="/register" className="font-semibold text-orange-600 hover:underline">
+                        Register করুন
                     </Link>
                 </p>
             </div>
@@ -127,4 +106,4 @@ function Register() {
     );
 }
 
-export default Register;
+export default Login;

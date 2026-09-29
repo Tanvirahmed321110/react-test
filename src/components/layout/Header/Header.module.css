@@ -54,6 +54,10 @@ header {
     background-color: rgb(254, 176, 32);
 }
 
+.login-btn {
+    font-weight: 600;
+}
+
 :global(.happy-hours) {
     color: #ffffff !important;
     background: linear-gradient(135deg, #e53935, #ff9800);

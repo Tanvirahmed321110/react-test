@@ -120,3 +120,7 @@ a {
     letter-spacing: .4px;
     line-height: 1.5;
 }
+
+.section-gap-bottom {
+    margin-bottom: 68px;
+}

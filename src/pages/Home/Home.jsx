@@ -49,7 +49,7 @@ const Home = () => {
 
 
             {/* Best Items Section */}
-            <section className="section-gap">
+            <section className="section-gap section-gap-bottom">
                 <div className="container">
                     <h2 className="section-title">Trending Best Items </h2>
                     <div className="best-card grid grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-4">
