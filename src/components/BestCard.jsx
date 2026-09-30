@@ -2,12 +2,15 @@ import { Link } from "react-router-dom";
 import '.././data/trendingItems'
 import Modal from "../components/Modal";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../features/cartSlice";
 
 function BestCard(props) {
+
     const [showModal, setShowModal] = useState(false);
     const dispatch = useDispatch()
+    const items = useSelector((state) => state.cart.cartItems)
+    const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0)
 
     return (
         <article className="best-card bg-white rounded-xl shadow-xl   transition-all duration-300 overflow-hidden group flex flex-col h-full">
@@ -84,8 +87,8 @@ function BestCard(props) {
                     Add to Cart
                 </button>
 
-                <Modal isOpen={showModal} onClose={() => setShowModal(false)} title="শীঘ্রই আসছে">
-                    Cart Total : ${(props.cartTotal || 0).toFixed(2)}
+                <Modal isOpen={showModal} onClose={() => setShowModal(false)} title="Added to Cart">
+                    Cart Total : {total.toFixed(2)}
                 </Modal>
             </div>
         </article>
