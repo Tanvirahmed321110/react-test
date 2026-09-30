@@ -10,6 +10,7 @@ import Category from "../pages/Category/Category";
 import Login from "../pages/Auth/Login";
 import NotFound from "../components/NotFound";
 import Register from "../pages/Auth/Register";
+import Cart from "../pages/Cart/Cart";
 
 export default function AppRouter() {
     return (
@@ -22,6 +23,7 @@ export default function AppRouter() {
                 <Route path="/products" element={<Products />} />
                 <Route path="/products/:id" element={<ProductDetails />} />
                 <Route path="/happy-hour" element={<Offer />} />
+                <Route path="/cart" element={<Cart />} />
 
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />

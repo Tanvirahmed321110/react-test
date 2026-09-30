@@ -2,9 +2,12 @@ import { Link } from "react-router-dom";
 import '.././data/trendingItems'
 import Modal from "../components/Modal";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../features/cartSlice";
 
 function BestCard(props) {
     const [showModal, setShowModal] = useState(false);
+    const dispatch = useDispatch()
 
     return (
         <article className="best-card bg-white rounded-xl shadow-xl   transition-all duration-300 overflow-hidden group flex flex-col h-full">
@@ -70,6 +73,12 @@ function BestCard(props) {
                 <button onClick={() => {
                     setShowModal(true)
                     props.setCartTotal((prev) => prev + props.price)
+                    dispatch(addToCart({
+                        id: props.id,
+                        title: props.title,
+                        price: props.price,
+                        image: props.image
+                    }))
                 }}
                     className="mt-auto w-full card-btn  text-white text-md font-semibold py-2 rounded-lg transition-colors duration-200 active:scale-[0.98]">
                     Add to Cart
