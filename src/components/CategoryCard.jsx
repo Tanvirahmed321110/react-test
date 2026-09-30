@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Categorycard({ image, title, offer, category }) {
     return (
-        <article className="card bg-white rounded-xl shadow-md hover:shadow-xl   transition-shadow duration-300 overflow-hidden group">
+        <article className="rounded-lg   shadow-md hover:shadow-xl   transition-shadow duration-300 overflow-hidden group">
             <div className="card-image-wrap relative overflow-hidden h-[120px] md:h-[180px]">
 
                 <Link to={`/category?name=${category}`}>

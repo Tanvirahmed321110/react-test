@@ -13,7 +13,7 @@ function BestCard(props) {
     const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0)
 
     return (
-        <article className="best-card bg-white rounded-xl shadow-xl   transition-all duration-300 overflow-hidden group flex flex-col h-full">
+        <article className="best-card bg-white rounded-lg shadow-xl    transition-all duration-300 overflow-hidden group flex flex-col h-full">
             <div className="best-card-image relative overflow-hidden">
                 <Link to={`/products/${props.id}`}>
                     <img
@@ -83,7 +83,7 @@ function BestCard(props) {
                         image: props.image
                     }))
                 }}
-                    className="mt-auto w-full card-btn  text-white text-md font-semibold py-2 rounded-lg transition-colors duration-200 active:scale-[0.98]">
+                    className="mt-auto w-full card-btn  text-white text-md font-semibold py-2 rounded-sm transition-colors duration-200 active:scale-[0.98]">
                     Add to Cart
                 </button>
 

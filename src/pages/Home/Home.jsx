@@ -1,6 +1,5 @@
 import Ads from "./components/Ads"
 import Banner from "./components/Banner"
-import Card from "../../components/Categorycard"
 import './home.css'
 import trendingItems from "../../data/trendingItems"
 import bestItems from "../../data/bestItems";
