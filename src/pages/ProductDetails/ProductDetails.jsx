@@ -3,6 +3,8 @@ import './ProductDetails.css'
 import trendingItems from '../../data/bestItems.js'
 import { useState } from 'react'
 import Modal from '../../components/Modal.jsx'
+import { useDispatch, useSelector } from 'react-redux'
+import { addToCart, selectCartTotal } from '../../features/cartSlice'
 
 function ProductDetails() {
 
@@ -23,6 +25,8 @@ function ProductDetails() {
         });
     };
 
+    const dispatch = useDispatch()
+    const total = useSelector(selectCartTotal)
 
 
     const [cartModal, setCartModal] = useState(false)
@@ -96,10 +100,22 @@ function ProductDetails() {
 
                         <div className="buy">
                             <input className="qty" type="number" defaultValue="1" min="1" max="18" aria-label="Quantity" />
-                            <button onClick={() => setCartModal(true)} className="add-btn" type="button">Add to Cart</button>
+                            <button
+                                onClick={() => {
+                                    dispatch(addToCart({
+                                        id: product.id,
+                                        title,
+                                        price,
+                                        image,
+                                    }))
+                                    setCartModal(true)
+                                }}
+                                className="add-btn" type="button">
+                                Add to Cart
+                            </button>
                             {/* Modal */}
                             <Modal isOpen={cartModal} onClose={() => setCartModal(false)} >
-                                Feature Upcomming as soon as Possable
+                                Total {total.toFixed(2)}
                             </Modal>
                         </div>
 
